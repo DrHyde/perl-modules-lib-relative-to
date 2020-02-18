@@ -1,0 +1,8 @@
+CHANGELOG
+MANIFEST
+GPL2.txt
+lib/lib/relative/to.pm
+lib/lib/relative/to/GitCheckout.pm
+lib/lib/relative/to/ParentContaining.pm
+Makefile.PL
+ARTISTIC.txt
