@@ -13,9 +13,9 @@ my $lookfor = abs_path(File::Spec->catdir(
     qw(t fakehgrepo lib)
 ));
 
-$lookfor =~ s/\//[\\\/]/g;
+$lookfor =~ s/\//\\/g if($lookfor =~ /^[A-Z]:\//);;
 ok(
-    (grep { $_ =~ /$lookfor/ } @INC),
+    (grep { $_ eq $lookfor } @INC),
     "Found '$lookfor' in \@INC"
 ) || diag('@INC contains ['.join(', ', @INC).']');
 
