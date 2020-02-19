@@ -38,8 +38,7 @@ sub parent_dir {
     my $class = shift;
     my($volume, $dir) = File::Spec->splitpath(shift);
     File::Spec->catdir(
-        ($volume ? $volume : ()),
-        $dir
+        grep { length($_) } ($volume, $dir)
     );
 }
 
@@ -148,6 +147,8 @@ tests and appropriate fixtures.
 =head2 NAMING
 
 Plugin names must take the form C<lib::relative::to::YourPluginName>.
+
+The C<lib::relative::to::ZZZ::*> namespace is reserved.
 
 =head2 FUNCTIONS
 
