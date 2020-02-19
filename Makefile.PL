@@ -1,4 +1,6 @@
 use ExtUtils::MakeMaker;
+use strict;
+use warnings;
 
 WriteMakefile(
     NAME         => 'lib::relative::to',
@@ -11,8 +13,18 @@ WriteMakefile(
     },
     VERSION_FROM => 'lib/lib/relative/to.pm',
     PREREQ_PM    => {
-        'lib::relative' => 0,
-        'lib::abs'      => 0,
+        'Test::Exception' => 0,
+        'Test::More' =>      0.88, # done_testing
     },
-    MIN_PERL_VERSION    => 5.010,
+    test => {
+        TESTS => join(' ', find_tests('t'))
+    }
 );
+
+sub find_tests {
+    my $dir = shift;
+    opendir(DIR, $dir);
+    my @dirs = grep { $_ !~ /^\.{1,2}$/ && -d "$dir/$_" } readdir(DIR);
+    closedir(DIR);
+    return (glob("$dir/*.t"), map { find_tests("$dir/$_") } @dirs);
+}
