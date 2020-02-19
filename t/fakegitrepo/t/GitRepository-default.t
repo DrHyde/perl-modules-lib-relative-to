@@ -43,7 +43,7 @@ my $lookfor = abs_path(File::Spec->catdir(
     qw(t fakegitrepo lib)
 ));
 
-$lookfor =~ s/\//[\\/]/g;
+$lookfor =~ s/\//[\\\/]/g;
 ok(
     (grep { $_ =~ /$lookfor/ } @INC),
     "Found '$lookfor' in \@INC"
