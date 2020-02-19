@@ -46,6 +46,6 @@ my $lookfor = abs_path(File::Spec->catdir(
 ok(
     (grep { $_ eq $lookfor } @INC),
     "Found '$lookfor' in \@INC"
-);
+) || diag('@INC contains ['.join(', ', @INC).']');
 
 done_testing();
