@@ -8,7 +8,7 @@ use File::Spec;
 
 use lib ();
 
-our $VERSION = '1';
+our $VERSION = '1.0000';
 our $called_from;
 
 sub import {

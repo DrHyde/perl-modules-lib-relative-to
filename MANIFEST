@@ -18,3 +18,5 @@ t/use.t
 t/fakegitrepo/t/git-repo.t
 lib/lib/relative/to/SvnCheckout.pm
 t/fakesvncheckout/trunk/t/svn-checkout.t
+t/fakesvncheckout/trunk/.svn/entries
+MANIFEST.SKIP
