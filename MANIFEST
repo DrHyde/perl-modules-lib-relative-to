@@ -3,7 +3,6 @@ MANIFEST
 t/fakehgrepo/t/hg-repo.t
 t/fakehgrepo/.hg/store/placeholder
 t/parentcontaining-failure.t
-t/fakegitrepo/t/GitRepository-default.t
 GPL2.txt
 lib/lib/relative/to.pm
 lib/lib/relative/to/HgRepository.pm
@@ -16,3 +15,6 @@ t/pod.t
 t/fakegitrepo/lib/placeholder
 t/fakehgrepo/lib/placeholder
 t/use.t
+t/fakegitrepo/t/git-repo.t
+lib/lib/relative/to/SvnCheckout.pm
+t/fakesvncheckout/trunk/t/svn-checkout.t
