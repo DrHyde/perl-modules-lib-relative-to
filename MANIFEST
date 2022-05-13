@@ -21,3 +21,4 @@ t/fakesvncheckout/trunk/t/svn-checkout.t
 t/fakesvncheckout/trunk/.svn/entries
 MANIFEST.SKIP
 t/fakesvncheckout/trunk/lib/placeholder
+lib/Directory/relative/to.pm
