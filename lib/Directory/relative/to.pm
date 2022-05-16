@@ -78,7 +78,7 @@ It normally returns a list of fully-qualified directory names,
 but if there is only one directory to be returned and you call
 it in scalar context you will get a scalar name.
 
-If there aer multiple directory names but you use scalar
+If there are multiple directory names but you use scalar
 context that is a fatal error.
 
 =cut
