@@ -25,7 +25,7 @@ Both of these will look up through the parent directories of the file that
 contains this code until it finds the root of a git repository, then return
 the absolute paths of the 'lib' and 't/lib' directories in that repository.
 
-    use Directory::relative::to (relative_dir);
+    use Directory::relative::to qw(relative_dir);
 
     my @dirs = relative_dir( GitRepository => qw(lib t/lib) );
 
