@@ -4,8 +4,10 @@ use warnings;
 
 WriteMakefile(
     NAME         => 'lib::relative::to',
-    META_MERGE => {
+    META_ADD => {
         license => ["artistic_1", "gpl_2"],
+},
+META_MERGE => {
         resources => {
 	    repository => 'https://github.com/DrHyde/perl-modules-lib-relative-to',
 	    bugtracker => 'https://github.com/DrHyde/perl-modules-lib-relative-to/issues'
